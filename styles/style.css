@@ -35,6 +35,7 @@
 }
 
 .header__subtitle {
+  margin: 0;
   position: absolute;
   left: 64px;
   width: 388px;
@@ -82,6 +83,7 @@
 }
 
 .two-columns__brief {
+  margin: 0;
   width: 175px;
   color: #2f80ed;
   line-height: 1.2;
@@ -178,12 +180,9 @@
 /* ЧЕТВЕРТЫЙ БЛОК */
 
 .feynman {
-  height: 890px;
-  background-image: url(../images/feynman.png);
-  background-repeat: no-repeat;
+  min-height: 890px;
+  background: no-repeat left bottom url('../images/feynman.png'), #F2F2F2;
   background-size: 867px 637px;
-  background-position-y: bottom;
-  background-color: #f2f2f2;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -204,6 +203,7 @@
 }
 
 .feynman__subtitle {
+  margin: 0;
   display: flex;
   line-height: 51px;
   font-size: 36px;
@@ -256,45 +256,55 @@
 
 .kaufman__triangle {
   position: absolute;
+  background-image: url(../images/kaufman-triangle.svg);
+  width: 877px;
+  height: 877px;
+  background-size: 877px 877px;
+  top: 0;
   right: -210px;
 }
 
 /* ШЕСТОЙ БЛОК */
 
 .footer {
-  min-width: 1100px;
-  max-width: 1600px;
+  box-sizing: border-box;
+  color: white;
   margin: 0 auto;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__columns {
+  width: 90%;
   padding-top: 60px;
   padding-bottom: 40px;
   display: flex;
   justify-content: space-around;
-  background-color: #1f1f1f;
-  color: white;
   min-height: 350px;
 }
 
-.footer__columns_content_copyright {
+.footer__column_content_copyright {
   flex-basis: 711px;
-  position: relative;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .logo_place_footer {
-  color: white;
   width: 228px;
   height: 32px;
 }
 
 .footer__author {
-  position: absolute;
   line-height: 25px;
   font-weight: normal;
   font-size: 18px;
-  bottom: 18px;
+  margin: 0;
+  padding-bottom: 18px;
 }
 
-.footer__columns_content_info {
+.footer__column_content_info {
   display: flex;
   flex-direction: column;
 }
@@ -320,19 +330,15 @@
   font-weight: normal;
 }
 
-.footer__columns_content_social{
+.footer__column_content_social{
   display: flex;
   flex-direction: column;
 }
 
 .footer__social-icon {
-  padding: 0;
-  margin: 0;
   width: 16px;
   height: 16px;
-  display: flex;
-  text-decoration-line: none;
-  list-style: none;
+  margin-right: 10px;
 }
 
 .footer__column-link {
@@ -347,4 +353,3 @@
   font-size: 18px;
   font-weight: normal;
 }
-
